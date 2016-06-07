@@ -1,3 +1,5 @@
+require 'pry'
+require 'minitest/pride'
 class Contact
 attr_reader :id
 attr_accessor :first_name, :last_name, :email, :note
@@ -103,7 +105,7 @@ attr_accessor :first_name, :last_name, :email, :note
 			else
 				puts "ERROR ERROR ERROR"
 		end
-		return contact_array
+		return contact_array[0]
 	end
 
 
@@ -126,6 +128,9 @@ attr_accessor :first_name, :last_name, :email, :note
 	# Feel free to add other methods here, if you need them.
 
 end #END OF CONTACT CLASS
+
+# mitch=Contact.create("m","m","m","m")
+# puts Contact.find_by('first_name','m')
 
 
 ### TESTING INPUT / OUTPUT ###
