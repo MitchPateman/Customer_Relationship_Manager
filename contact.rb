@@ -49,7 +49,6 @@ attr_accessor :first_name, :last_name, :email, :note
 	# 2. the new value for that attribute
 	# and then make the appropriate change to the contact
 	def update(attribute, new_value)
-
 			case attribute
 			when "first_name"
 				@first_name = new_value

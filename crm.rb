@@ -4,7 +4,7 @@ require_relative "contact"
 class CRM
 attr_accessor :name
 
-@@contact_list = Contact.all
+#@@contact_list = Contact.all
 
 
 
@@ -58,7 +58,9 @@ attr_accessor :name
 		print 'Enter a Note: '
 		note = gets.chomp
 
-		Contact.create(first_name, last_name, email, note)
+		new_contact = Contact.create(first_name, last_name, email, note)
+		puts "New Contact: #{new_contact.first_name} #{new_contact.last_name}, ID: #{new_contact.id}"
+		new_contact
 	end
 
 
@@ -105,7 +107,7 @@ attr_accessor :name
 	end
 
 	def display_all_contacts
-			display_contacts(@@contact_list)
+			display_contacts(Contact.all)
 		# HINT: Make use of the display_contacts method to keep your code DRY
 	end
 
