@@ -97,6 +97,7 @@ attr_accessor :name
 		del_user.delete
 	end
 
+
 	# This method should accept as an argument an array of contacts
 	# and display each contact in that array
 	def display_contacts(contacts)
